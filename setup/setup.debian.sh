@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
+
 set -Eeuo pipefail
-
-trap 'echo "❌ Failed at line $LINENO. Command: $BASH_COMMAND" >&2' ERR
-
 
 if ! command -v make &> /dev/null; then
     echo "🔧 Installing make..."
