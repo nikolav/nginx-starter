@@ -1,20 +1,22 @@
 types {
+    # Text formats
     text/html                                        html htm shtml;
     text/css                                         css;
     text/xml                                         xml;
-    image/gif                                        gif;
-    image/jpeg                                       jpeg jpg;
-    application/javascript                           js;
-    application/atom+xml                             atom;
-    application/rss+xml                              rss;
-
     text/mathml                                      mml;
     text/plain                                       txt;
     text/vnd.sun.j2me.app-descriptor                 jad;
     text/vnd.wap.wml                                 wml;
     text/x-component                                 htc;
+    text/csv                                         csv;
+    text/markdown                                    md markdown;
+    text/yaml                                        yml yaml;
+    text/vtt                                         vtt;
+    text/cache-manifest                              appcache manifest;
 
-    image/avif                                       avif;
+    # Images
+    image/gif                                        gif;
+    image/jpeg                                       jpeg jpg jpe;
     image/png                                        png;
     image/svg+xml                                    svg svgz;
     image/tiff                                       tif tiff;
@@ -23,69 +25,109 @@ types {
     image/x-icon                                     ico;
     image/x-jng                                      jng;
     image/x-ms-bmp                                   bmp;
+    image/avif                                       avif;
+    image/apng                                       apng;
+    image/heic                                       heic;
+    image/heif                                       heif;
+    image/jp2                                        jp2 jpx jpm;
+    image/ktx                                        ktx;
 
+    # Fonts
     font/woff                                        woff;
     font/woff2                                       woff2;
-
-    application/java-archive                         jar war ear;
-    application/json                                 json;
-    application/mac-binhex40                         hqx;
-    application/msword                               doc;
-    application/pdf                                  pdf;
-    application/postscript                           ps eps ai;
-    application/rtf                                  rtf;
-    application/vnd.apple.mpegurl                    m3u8;
-    application/vnd.google-earth.kml+xml             kml;
-    application/vnd.google-earth.kmz                 kmz;
-    application/vnd.ms-excel                         xls;
+    font/ttf                                         ttf;
+    font/otf                                         otf;
+    font/collection                                  ttc;
     application/vnd.ms-fontobject                    eot;
-    application/vnd.ms-powerpoint                    ppt;
-    application/vnd.oasis.opendocument.graphics      odg;
-    application/vnd.oasis.opendocument.presentation  odp;
-    application/vnd.oasis.opendocument.spreadsheet   ods;
-    application/vnd.oasis.opendocument.text          odt;
-    application/vnd.openxmlformats-officedocument.presentationml.presentation
-                                                     pptx;
-    application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-                                                     xlsx;
+
+    # JavaScript / Web
+    application/javascript                           js mjs;
+    application/wasm                                 wasm;
+    application/json                                 json;
+    application/json5                                json5;
+    application/manifest+json                        webmanifest;
+    application/x-web-app-manifest+json              webapp;
+    application/typescript                           ts tsx;
+    application/javascript;profile=application/jsx   jsx;
+
+    # WebAssembly
+    application/wasm                                 wasm;
+
+    # Archives & Compression
+    application/zip                                  zip;
+    application/x-7z-compressed                      7z;
+    application/x-rar-compressed                     rar;
+    application/x-tar                                tar;
+    application/gzip                                 gz;
+    application/bzip2                                bz2;
+    application/x-bzip                               bz;
+    application/x-xz                                 xz;
+    application/zstd                                 zst;
+    application/java-archive                         jar war ear;
+    application/x-java-archive-diff                  jardiff;
+
+    # Documents
+    application/pdf                                  pdf;
+    application/msword                               doc;
     application/vnd.openxmlformats-officedocument.wordprocessingml.document
                                                      docx;
-    application/vnd.wap.wmlc                         wmlc;
-    application/wasm                                 wasm;
-    application/x-7z-compressed                      7z;
-    application/x-cocoa                              cco;
-    application/x-java-archive-diff                  jardiff;
-    application/x-java-jnlp-file                     jnlp;
-    application/x-makeself                           run;
-    application/x-perl                               pl pm;
-    application/x-pilot                              prc pdb;
-    application/x-rar-compressed                     rar;
-    application/x-redhat-package-manager             rpm;
-    application/x-sea                                sea;
-    application/x-shockwave-flash                    swf;
-    application/x-stuffit                            sit;
-    application/x-tcl                                tcl tk;
-    application/x-x509-ca-cert                       der pem crt;
-    application/x-xpinstall                          xpi;
-    application/xhtml+xml                            xhtml;
-    application/xspf+xml                             xspf;
-    application/zip                                  zip;
+    application/vnd.ms-excel                         xls;
+    application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+                                                     xlsx;
+    application/vnd.ms-powerpoint                    ppt;
+    application/vnd.openxmlformats-officedocument.presentationml.presentation
+                                                     pptx;
+    application/vnd.oasis.opendocument.text          odt;
+    application/vnd.oasis.opendocument.spreadsheet   ods;
+    application/vnd.oasis.opendocument.presentation  odp;
+    application/vnd.oasis.opendocument.graphics      odg;
+    application/rtf                                  rtf;
+    application/vnd.apple.pages                      pages;
+    application/vnd.apple.numbers                    numbers;
+    application/vnd.apple.keynote                    keynote;
 
-    application/octet-stream                         bin exe dll;
-    application/octet-stream                         deb;
-    application/octet-stream                         dmg;
-    application/octet-stream                         iso img;
-    application/octet-stream                         msi msp msm;
+    # Data interchange
+    application/xml                                  xml;
+    application/atom+xml                             atom;
+    application/rss+xml                              rss;
+    application/ld+json                              jsonld;
+    application/geo+json                             geojson;
+    application/vnd.google-earth.kml+xml             kml;
+    application/vnd.google-earth.kmz                 kmz;
+    application/graphql                              graphql;
+    application/protobuf                             protobuf pb;
+    application/x-protobuf                           proto;
+    application/x-msgpack                            msgpack;
+    application/x-ndjson                             ndjson;
+    application/x-yaml                               yaml;
 
-    audio/midi                                       mid midi kar;
-    audio/mpeg                                       mp3;
-    audio/ogg                                        ogg;
+    # API & Web Services
+    application/grpc-web                             grpc;
+    application/grpc-web+proto                       grpc.proto;
+    application/openapi+json                        openapi.json;
+    application/openapi+yaml                        openapi.yaml;
+    application/swagger+json                        swagger.json;
+    application/swagger+yaml                        swagger.yaml;
+    application/raml+yaml                           raml;
+
+    # GraphQL
+    application/graphql                             graphql;
+
+    # Streaming & Media
+    audio/mpeg                                       mpga mp2 mp3;
+    audio/ogg                                        ogg oga;
     audio/x-m4a                                      m4a;
     audio/x-realaudio                                ra;
+    audio/wav                                        wav;
+    audio/webm                                       webm;
+    audio/flac                                       flac;
+    audio/opus                                       opus;
+    audio/vnd.wave                                   wav;
+    audio/midi                                       mid midi kar;
+    audio/mp4                                        m4a;
+    audio/aac                                        aac;
 
-    video/3gpp                                       3gpp 3gp;
-    video/mp2t                                       ts;
-    video/mp4                                        mp4;
+    video/mp4                                        mp4 m4v;
     video/mpeg                                       mpeg mpg;
     video/quicktime                                  mov;
     video/webm                                       webm;
@@ -95,4 +137,112 @@ types {
     video/x-ms-asf                                   asx asf;
     video/x-ms-wmv                                   wmv;
     video/x-msvideo                                  avi;
+    video/3gpp                                       3gpp 3gp;
+    video/mp2t                                       ts;
+    video/ogg                                        ogv;
+    video/x-matroska                                 mkv;
+
+    # HLS Streaming
+    application/vnd.apple.mpegurl                    m3u8;
+    video/mp2t                                       ts;
+
+    # DASH Streaming
+    application/dash+xml                             mpd;
+    video/mp4                                        mp4;
+
+    # IoT / Embedded
+    application/senml+json                           senml;
+    application/sensml+json                          sensml;
+    application/senml+xml                            senml+xml;
+    application/sensml+xml                           sensml+xml;
+    application/coap+json                            coap+json;
+    application/coap+xml                             coap+xml;
+    application/lwm2m+json                           lwm2m+json;
+
+    # Security & Certificates
+    application/x-x509-ca-cert                       der pem crt;
+    application/pkix-cert                            cer;
+    application/pkcs7-mime                           p7m p7c;
+    application/pkcs7-signature                      p7s;
+    application/x-pem-file                           pem;
+    application/x-pkcs12                             p12 pfx;
+    application/jwk+json                             jwk;
+    application/jwks+json                            jwks;
+    application/jwt                                  jwt;
+
+    # Configuration
+    application/xml                                  xml xsl;
+    application/toml                                 toml;
+    application/hcl                                  hcl;
+    application/terraform                            tf tfvars;
+    application/x-ansible-vault                      vault;
+    application/yaml                                 yaml yml;
+
+    # Logs
+    text/plain                                       log txt;
+    text/x-log                                       log;
+
+    # Source code
+    text/x-c                                         c cc cpp cxx h hpp;
+    text/x-java-source                               java;
+    text/x-python                                    py pyw;
+    text/x-ruby                                      rb;
+    text/x-go                                        go;
+    text/x-rust                                      rs;
+    text/x-scala                                     scala;
+    text/x-swift                                     swift;
+    text/x-php                                       php php3 php4 php5 phtml;
+    text/x-sh                                        sh bash;
+    text/x-shellscript                               sh;
+    text/x-sql                                       sql;
+    text/x-dockerfile                                Dockerfile;
+    text/x-makefile                                  Makefile makefile;
+    application/x-perl                               pl pm;
+    application/x-tcl                                tcl tk;
+
+    # Docker & Container
+    application/vnd.docker.distribution.manifest.v2+json
+                                                     manifest;
+    application/vnd.oci.image.manifest.v1+json       oci.manifest;
+    application/vnd.oci.image.index.v1+json          oci.index;
+    application/vnd.oci.image.config.v1+json         oci.config;
+
+    # Version Control
+    text/plain                                       gitignore gitattributes;
+    text/x-diff                                      diff patch;
+
+    # Database
+    application/sql                                  sql;
+    application/vnd.sqlite3                          sqlite3 sqlite db;
+    application/vnd.mysql                             mysql;
+    application/vnd.postgresql                       postgresql;
+
+    # Build Tools
+    application/xml                                  pom.xml;
+    application/json                                 package.json;
+    application/json                                 package-lock.json;
+    application/yaml                                 composer.lock;
+    application/vnd.npm.install-lock+json            npm.lock;
+
+    # Fonts (alternative types)
+    application/x-font-ttf                           ttf;
+    application/x-font-opentype                      otf;
+    application/x-font-woff                          woff;
+    application/x-font-woff2                         woff2;
+
+    # Misc
+    application/octet-stream                         bin exe dll;
+    application/octet-stream                         deb;
+    application/octet-stream                         dmg;
+    application/octet-stream                         iso img;
+    application/octet-stream                         msi msp msm;
+    application/x-iso9660-image                      iso;
+    application/x-dmg                                dmg;
+    application/x-apple-diskimage                    dmg;
+    application/x-debian-package                     deb;
+    application/x-rpm                                rpm;
+    application/x-shockwave-flash                    swf;
+    application/x-stuffit                            sit;
+    application/x-xpinstall                          xpi;
+    application/x-msdownload                         dll;
 }
